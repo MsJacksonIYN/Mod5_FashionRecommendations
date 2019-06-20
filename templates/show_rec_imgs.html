@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
+    <a class="nav-item nav-link text-muted" href="home">Home</a>
+    <a class="nav-item nav-link text-muted" href="recs">Recommendations</a>
+    <a class="nav-item nav-link text-muted" href="data">Project Details</a>
+    <a class="nav-item nav-link text-muted" href="resources">Resources</a>
+  </nav>
+  <style type="text/css">
+    body {
+      background: #ffe4e1b9 !important;
+    } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+  </style>
+  <body>
+    <div class="container">
+      <br />
+      <br />
+      <div class="row align-items-center justify-content-center">
+        <div class="col-2">
+          <div class="card border-success" style="width: 16rem;">
+            <div class="card-header text-success">Because you loved this:</div>
+            <img src="{{ img_path }}" class="card-img-top" />
+            <div class="card-body">
+              <p class="card-text">
+                We think you might also like these pieces from Rent the
+                Runway...
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9 ml-auto">
+          <div class="card-deck">
+            {% for i in range(0,5) %}
+            <div class="card">
+              <div class="card-header text-capitalize">
+                {{ images[i].split("/")[-2] }}
+              </div>
+              <img
+                class="card-img-top"
+                src="{{
+                  images[i].replace('/data', 'http://71.167.113.56:5557/data')
+                }}"
+              />
+              <div class="card-body">
+                <h6 class="card-title text-capitalize">
+                  {{ urls[i].split("/")[-1].replace("_", " ") }}
+                </h6>
+              </div>
+              <div class="card-footer">
+                <a href="{{ urls[i] }}" target="_blank">See Product</a>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="row justify-content-center">
+      <div class="col-3 align-self-center">
+        <button
+          type="button"
+          class="btn btn-outline-secondary col align-self-center"
+        >
+          <a href="recs" class="text-muted">Try Again</a>
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

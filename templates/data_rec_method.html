@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
+    <a class="nav-item nav-link text-muted" href="/home">Home</a>
+    <a class="nav-item nav-link text-muted" href="/recs">Recommendations</a>
+    <a class="nav-item nav-link text-muted" href="/data">Project Details</a>
+    <a class="nav-item nav-link text-muted" href="/resources">Resources</a>
+  </nav>
+  <style type="text/css">
+    body {
+      background: #ffe4e1b9 !important;
+    } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+  </style>
+</html>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+        <ul class="list-group list-group-flush">
+          <a href="/data" class="list-group-item text-muted">Introduction</a>
+          <a href="/data/eda" class="list-group-item text-muted">Data</a>
+          <a href="/data/model" class="list-group-item text-muted">Model</a>
+          <a href="/data/rec-method" class="list-group-item text-muted"
+            >Recommender</a
+          >
+        </ul>
+      </div>
+      <div class="row"></div>
+      <div class="col-md-9 ml-auto">
+        <h4 class="display-4">Women's Fashion Recommender</h4>
+        <h5 class="lead">Recommendations Details</h5>
+        <br />
+        <p class="lead font-weight-bold">Annoy</p>
+        <p class="lead">
+          I utilized Spotify's library, Annoy (Approximate Nearest Neighbors Oh
+          Yeah), to create an embeddings index and to generate recommendations.
+          Annoy is built on the assumption that speed is more important than
+          perfect recommendations. The library allows you to select your
+          speed/accuracy tradeoff threshold, and will find the approximately
+          nearest neighbors from the embeddings index to the input image, based
+          on the distance metric selected. In this case, recommendations were
+          based on the cosine similarity of image embeddings.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>

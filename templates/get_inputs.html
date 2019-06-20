@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
+    <a class="nav-item nav-link text-muted" href="home">Home</a>
+    <a class="nav-item nav-link text-muted" href="recs">Recommendations</a>
+    <a class="nav-item nav-link text-muted" href="data">Project Details</a>
+    <a class="nav-item nav-link text-muted" href="resources">Resources</a>
+  </nav>
+  <style type="text/css">
+    div {
+      background: #ffe4e1c7 !important;
+    } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+    /* form { background: #ffe4e1b9 !important; } */
+  </style>
+  <body>
+    <div class="card text-center">
+      <div class="card-header">
+        <h1 class="display-3">Fashion Recommender</h1>
+      </div>
+      <div class="card-body">
+        <h4 class="lead">
+          Find styles you love based on inventory from <br />
+          <a
+            class="font-weight-bold text-muted"
+            href="https://www.renttherunway.com"
+          >
+            Rent the Runway
+          </a>
+        </h4>
+        <br />
+        <br />
+        <p class="font-weight-light">
+          Please select an image of the outfit you'd like to match
+        </p>
+        <form method="POST" enctype="multipart/form-data">
+          <div class="row justify-content-center">
+            <div class="form-group col-md-4">
+              <input
+                type="file"
+                name="img"
+                class="form-control-file"
+                id="exampleFormControlFile1"
+              />
+            </div>
+          </div>
+          <br />
+          <button type="submit" class="btn btn-secondary mb-2">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

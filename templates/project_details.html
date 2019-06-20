@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
+    <a class="nav-item nav-link text-muted" href="/home">Home</a>
+    <a class="nav-item nav-link text-muted" href="/recs">Recommendations</a>
+    <a class="nav-item nav-link text-muted" href="/data">Project Details</a>
+    <a class="nav-item nav-link text-muted" href="/resources">Resources</a>
+  </nav>
+  <style type="text/css">
+    body {
+      background: #ffe4e1b9 !important;
+    } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+  </style>
+</html>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+        <ul class="list-group list-group-flush">
+          <a href="/data" class="list-group-item text-muted">Introduction</a>
+          <a href="/data/eda" class="list-group-item text-muted">Data</a>
+          <a href="/data/model" class="list-group-item text-muted">Model</a>
+          <a href="/data/rec-method" class="list-group-item text-muted"
+            >Recommender</a
+          >
+        </ul>
+      </div>
+      <div class="row"></div>
+      <div class="col-md-9 ml-auto">
+        <h4 class="display-4">Women's Fashion Recommender</h4>
+        <h5 class="lead">Introduction</h5>
+        <br />
+        <p class="lead">
+          I often find myself looking at other women's outfits and thinking to
+          myself, I wonder where she got that {article of clothing} from! This
+          is particularly true when scrolling through social media, where people
+          tend to post their best-looking photos. To solve this problem, I
+          created a women's fashion recommender that could take a photo (say,
+          from a social media outlet), analyze it, and recommend similar items
+          that a user might like to try. This recommender system eases the
+          debate I have all too often: awkwardly ask her where she buys her
+          clothes, or spend the next 2 months searching stores and the internet
+          for a similar piece.
+        </p>
+        <p class="lead">
+          I've created a recommendation system that, based on an image selected
+          by the user, can recommend similar options available on Rent the
+          Runway for the user to try. To create this recommender, I trained 5
+          Convolutional Neural Networks to perform specific tasks, such as
+          classifying the type of clothing (pants/shirt/jacket) or classifying
+          clothing attributes (stripes, floral, lace, etc)). After training the
+          CNNs, I concatenated the trained embeddings from each model to create
+          a complex "description" of each photo. Recommendations are based on
+          cosine similarity of the inventory embeddings to the embedding of the
+          user-input photo
+        </p>
+      </div>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
+    <a class="nav-item nav-link text-muted" href="/home">Home</a>
+    <a class="nav-item nav-link text-muted" href="/recs">Recommendations</a>
+    <a class="nav-item nav-link text-muted" href="/data">Project Details</a>
+    <a class="nav-item nav-link text-muted" href="/resources">Resources</a>
+  </nav>
+  <style type="text/css">
+    body {
+      background: #ffe4e1b9 !important;
+    } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+  </style>
+</html>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+        <ul class="list-group list-group-flush">
+          <a href="/data" class="list-group-item text-muted">Introduction</a>
+          <a href="/data/eda" class="list-group-item text-muted">Data</a>
+          <a href="/data/model" class="list-group-item text-muted">Model</a>
+          <a href="/data/rec-method" class="list-group-item text-muted"
+            >Recommender</a
+          >
+        </ul>
+      </div>
+      <div class="row"></div>
+      <div class="col-md-9 ml-auto">
+        <h4 class="display-4">Women's Fashion Recommender</h4>
+        <h5 class="lead">Model Details</h5>
+        <br />
+        <p class="lead font-weight-bold">Architecture</p>
+        <p class="lead">
+          To get image embeddings, I trained 5 CNNs using the fast.ai
+          `cnn_learner`, utilizing transfer learning from ResNet50 (available
+          from the fast.ai library). The architecture and weights from ResNet50
+          are cut at the last convolutional layer, where several additional
+          layers are added. These additional layers are trained using my
+          training dataset to perform a specific classification task. After
+          training the last layers with the ResNet50 weights frozen for several
+          epochs, I unfroze the pre-trained weights and fine-tuned them to my
+          data using smaller learning rates (so weight adjustments were small).
+          An example of the final layers one of my CNNs can be seen below.
+          Embeddings were taken from the last fully connected layer.
+        </p>
+        <div class="mx-auto">
+          <img src="{{ img }}" />
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
