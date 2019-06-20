@@ -12,8 +12,9 @@ class Predict():
     def __init__(self):
         print("About to download")
         data_path = untar_data(
-            'https://womens-fashion-recommender.s3.us-east-2.amazonaws.com/', fname='models.tgz', data=False)
+            'https://womens-fashion-recommender.s3.us-east-2.amazonaws.com/models', data=False)
         print("Finished downloading")
+        data_path = os.path.abspath(os.path.join(data_path, os.pardir))
         cat_learner = load_learner(
             path=data_path, file='cat-rn50-size150-fr4-unfr2-fr4-unfr4.pkl')
         texture_learner = load_learner(
