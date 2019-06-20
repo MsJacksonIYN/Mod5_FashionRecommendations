@@ -1,4 +1,4 @@
-https://download.pytorch.org/whl/cpu/torch-1.0.1.post2-cp36-cp36m-linux_x86_64.whl
+# https://download.pytorch.org/whl/cpu/torch-1.0.1.post2-cp36-cp36m-linux_x86_64.whl
 fastai==1.0.53.post2
 Flask==1.0.2
 Werkzeug==0.14.1
