@@ -1,0 +1,4 @@
+fastai==1.0.53.post2
+Flask==1.0.2
+annoy==1.15.2
+Werkzeug==0.14.1
