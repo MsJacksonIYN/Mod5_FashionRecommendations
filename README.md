@@ -2,7 +2,7 @@
 
 A standalone HTTP web server that can recommend similar fashion outfits, based on the the [Rent the Runway](https://www.renttherunway.com/) inventory.
 
-Uses multiple neural networks (based on ResNet-50) behind the scenes to classify inputs by {category, texture, fabric, parts, shape}. The resulting embeddings are then used to query a pre-built nearest meighbors index for similar outputs.
+Uses multiple neural networks (based on ResNet-50) behind the scenes to classify inputs by {category, texture, fabric, parts, shape}. The resulting embeddings are then used to query a pre-built nearest neighbors index for similar outputs.
 
 A live demo is available at [http://fashionrecs.samantha.codes:5560/home](http://fashionrecs.samantha.codes:5560/home)
 
