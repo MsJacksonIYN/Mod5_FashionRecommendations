@@ -2,7 +2,7 @@
 
 A standalone HTTP web server that can recommend similar fashion outfits, based on the the [Rent the Runway](https://www.renttherunway.com/) inventory.
 
-Uses multiple neural networks (based on ResNet-50) behind the scenes to classify inputs by {category, texture, fabric, parts, shape}. The resulting embeddings are then used to query a pre-built nearest neighbors index for similar outputs.
+Uses multiple neural networks (with a ResNet50 backbone) behind the scenes to classify inputs by {category, texture, fabric, parts, shape}. The resulting embeddings are then used to query a pre-built nearest neighbors index for similar outputs.
 
 A live demo is available at [http://fashionrecs.samantha.codes:5560/home](http://fashionrecs.samantha.codes:5560/home)
 
@@ -33,10 +33,17 @@ recs = fashion.get_recs(img_path)
 
 ## Built With
 
-* [fast.ai](https://www.fast.ai/) - Deep learning library used for NN training
+* [fast.ai](https://www.fast.ai/) - Deep learning library used for CNN training
 * [Flask](http://flask.pocoo.org/) - Python HTTP server
 * [DeepFashion](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html) - Large-scale Fashion dataset used to train the classifiers
 * [Annoy](https://github.com/spotify/annoy) - Efficient Approximate Nearest Neighbors library
+
+## Files
+* [Notebooks_CNNs](https://github.com/MsJacksonIYN/Mod5_FashionRecommendations/tree/master/Notebooks_CNNs) - Source code (.ipynb) for training CNNs
+* [Notebooks_Recommender](https://github.com/MsJacksonIYN/Mod5_FashionRecommendations/tree/master/Notebooks_Recommender) - Source code (.ipynb) for building Annoy index and recommendations
+* [Outfits](https://github.com/MsJacksonIYN/Mod5_FashionRecommendations/tree/master/Outfits) - Example images that can be used to test the recommendation system 
+* [recommender_app.py](https://github.com/MsJacksonIYN/Mod5_FashionRecommendations/blob/master/recommender_app.py) - Spins up a Flask App to serve recommendations 
+* [predict.py](https://github.com/MsJacksonIYN/Mod5_FashionRecommendations/blob/master/predict.py) - Recommendation System
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
