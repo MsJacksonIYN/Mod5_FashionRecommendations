@@ -35,7 +35,7 @@ recs = fashion.get_recs(img_path)
 
 * [fast.ai](https://www.fast.ai/) - Deep learning library used for CNN training
 * [Flask](http://flask.pocoo.org/) - Python HTTP server
-* [DeepFashion](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion.html) - Large-scale Fashion dataset used to train the classifiers
+* [DeepFashion](http://mmlab.ie.cuhk.edu.hk/projects/DeepFashion/AttributePrediction.html) - Large-scale Fashion dataset used to train the classifiers
 * [Annoy](https://github.com/spotify/annoy) - Efficient Approximate Nearest Neighbors library
 
 ## Files
