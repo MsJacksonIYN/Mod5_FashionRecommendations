@@ -4,7 +4,7 @@ A standalone HTTP web server that can recommend similar fashion outfits, based o
 
 Uses multiple neural networks (with a ResNet50 backbone) behind the scenes to classify inputs by {category, texture, fabric, parts, shape}. The resulting embeddings are then used to query a pre-built nearest neighbors index for similar outputs.
 
-A live demo is available at [http://fashionrecs.samantha.codes:5560/home](http://fashionrecs.samantha.codes:5560/home)
+To try the recommendation system without cloning the repo, see this [live demo](https://fashionrecs.samantha.codes/home)
 
 ## Installation
 
